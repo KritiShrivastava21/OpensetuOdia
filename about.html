@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OpenSetu ବିଷୟରେ</title>
+  <style>
+    :root {
+      --max-width: 1200px;
+      --gutter: 24px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: #1F2937;
+      background: #fff;
+    }
+    .about-wrapper {
+      background-color: #F7F9FB;
+      position: relative;
+      overflow: hidden;
+    }
+    .white-tilted-layer {
+      position: absolute; top: 60px;
+      width: 100%; height: 1300px;
+      background: white;
+      transform: skewY(-5deg);
+      z-index: 0;
+    }
+    .blue-shapes {
+      position: absolute; top: -45px; right: 0;
+      z-index: 1; transform: skewY(-5deg);
+    }
+    .blue1, .blue2 { position: absolute; transform: skewX(-30deg); }
+    .blue1 {
+      background-color: #80E9FF;
+      width: 35vw; max-width: 420px;
+      height: 25px; top: 50px; right: 10px;
+      z-index: 1;
+    }
+    .blue2 {
+      background-color: #185ADB;
+      width: 10vw; max-width: 120px;
+      height: 25px; top: 70px; right: 200px;
+      z-index: 2;
+    }
+    .section {
+      position: relative;
+      max-width: var(--max-width);
+      padding: 8rem var(--gutter) 4rem;
+      margin: 0 auto;
+      z-index: 2;
+    }
+    .about-heading {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #032E83;
+      margin: 0 0 1.5rem;
+      text-align: left;
+    }
+    .top-container {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+    .top-text {
+      flex: 1 1 320px;
+      max-width: 500px;
+      text-align: left;
+    }
+    .top-text .highlight {
+      color: #0A55A7;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .top-text h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0.5rem 0 1.5rem;
+      color: #032E83;
+    }
+    .top-text p {
+      color: #425466;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .top-image {
+      flex: 0 1 320px;
+      max-width: 320px;
+    }
+    .top-image img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 20px 90px rgba(0,0,0,0.12);
+      border-radius: 15px;
+      justify-items: center;
+    }
+    
+    .grid-box {
+      background: #F5F7FA;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+    }
+    .grid-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+    .grid-box h3 {
+      font-size: 1.2rem;
+      color: #032E83;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .grid-box p {
+      color: #425466;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 6rem var(--gutter) 3rem; }
+      .about-heading {
+        font-size: 2rem;
+        text-align: center;
+      }
+      .top-container { flex-direction: column; }
+      .top-text { text-align: center; }
+      .top-text h2 { font-size: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .about-heading { font-size: 1.75rem; }
+      .top-text { font-size: 0.9rem; }
+      .top-text h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <section class="about-wrapper">
+    <div class="white-tilted-layer"></div>
+    <div class="blue-shapes">
+      <div class="blue1"></div>
+      <div class="blue2"></div>
+    </div>
+
+    <div class="section">
+      <div class="top-container">
+        <div class="top-text">
+          <h1 class="about-heading">ଆମ ବିଷୟରେ</h1>
+          <p class="highlight">ଗୋଟିଏ ନାମ, ଗୋଟିଏ ଭାଷା, ଗୋଟିଏ ପରିଚୟ</p>
+          <h2>OpenSetu ହେଉଛି ଭାରତର ନିଜସ୍ୱ ଇଣ୍ଟରନେଟର ସେତୁ</h2>
+          <p>ଆମେ ପ୍ରତ୍ୟେକ ଭାରତୀୟଙ୍କୁ ସେମାନଙ୍କ ମାତୃଭାଷାରେ ୱେବ୍ ଆକ୍ସେସ୍ କରିବାକୁ ସକ୍ଷମ କରୁଛୁ, ଇଂରାଜୀ ନାହିଁ, ନୂତନ ଆପ୍ ନାହିଁ, ଗେଟକିପର ନାହିଁ।</p>
+          <p>ଏକ ମୁକ୍ତ, ବିକେନ୍ଦ୍ରୀକରଣ ଏବଂ ଅନ୍ତର୍ଭୁକ୍ତ ଇଣ୍ଟରନେଟର ଦୃଷ୍ଟିକୋଣରୁ ଜନ୍ମିତ, OpenSetu ବ୍ୟବହାରକାରୀମାନଙ୍କୁ ହ୍ୟାଣ୍ଡସେକ୍ ଦ୍ୱାରା ପରିଚାଳିତ ଏବଂ ଭାରତରେ ମୂଳ ଥିବା ଏକ ବହୁଭାଷୀ ୱେବ୍ ଅନଲକ୍ କରିବା ପାଇଁ ସେମାନଙ୍କର DNS ସେଟିଂସ୍ ପରିବର୍ତ୍ତନ କରିବାକୁ ଦେଇଥାଏ। ଏହା ଆପଣଙ୍କ ପାଇଁ ଇଣ୍ଟରନେଟ୍, ଯେଉଁଠାରେ ଡୋମେନ୍ ନାମଗୁଡ଼ିକ ବିଦେଶୀ ସ୍କ୍ରିପ୍ଟ କିମ୍ବା କେନ୍ଦ୍ରୀକୃତ ନିୟନ୍ତ୍ରଣରେ ନୁହେଁ, ବରଂ ଆପଣଙ୍କ ନିଜସ୍ୱ ଭାଷାରେ, ଆପଣଙ୍କ ଦ୍ୱାରା ମାଲିକାନା।</p>
+          <p>ଆମେ ଇଣ୍ଟରନେଟକୁ ଏକାଧିକାର କବଳରୁ ଉଦ୍ଧାର କରୁଛୁ ଏବଂ ଏହାକୁ ଲୋକଙ୍କୁ ଗୋଟିଏ ନାମ, ଗୋଟିଏ ଭାଷା, ଗୋଟିଏ ପରିଚୟ ଫେରାଇ ଦେଉଛୁ।</p>
+        </div>
+        <div class="top-image">
+          <img src="img5.png" alt="About Image">
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid-box">
+          <h3>ବିଲ୍ଡରମାନଙ୍କ ପାଇଁ</h3>
+          <p>OpenSetu ହେଉଛି ନବସୃଜନ ପାଇଁ ଏକ ଖେଳ ପଡ଼ିଆ। ଡେଭଲପରମାନେ ସ୍ଥାନୀୟ ଆପ୍ ନିର୍ମାଣ କରିବାଠାରୁ ଆରମ୍ଭ କରି ଡିଜିଟାଲ୍ ପରିଚୟକୁ ପୁନଃକଳ୍ପନା କରୁଥିବା ଷ୍ଟାର୍ଟଅପ୍ ପର୍ଯ୍ୟନ୍ତ, ଭାରତ ପାଖରେ ଏବେ ଏକ ବିକେନ୍ଦ୍ରୀକୃତ ଭିତ୍ତିଭୂମି ପ୍ରସ୍ତୁତ ଅଛି। ସ୍ଥାନୀୟ ଡୋମେନ୍ ନାମ, ବହୁଭାଷୀ ଲଗଇନ୍ ଏବଂ ଏକ ଖୋଲା DNS ସହିତ, ଆପଣ ଏପରି ସେବା ନିର୍ମାଣ କରିପାରିବେ ଯାହା ସିଧାସଳଖ 1.4 ବିଲିୟନ ସ୍ୱର ସହିତ ସେମାନଙ୍କ ନିଜ ଭାଷାରେ କଥା ହୋଇପାରିବେ।</p>
+        </div>
+        <div class="grid-box">
+          <h3>ନିବେଶକଙ୍କ ପାଇଁ</h3>
+          <p>ଭାରତ ଖୋଲା ଇଣ୍ଟରନେଟରେ ମାନବଜାତିର ସବୁଠାରୁ ବଡ଼ ଅଂଶ। OpenSetu କେବଳ ଭିତ୍ତିଭୂମି ନୁହେଁ, ଏହା ଏକ ଭିତ୍ତିଭୂମି-ଶକ୍ତି। ଆମେ ଭାଷା ପ୍ରତିବନ୍ଧକକୁ ଦୂର କରି ଏବଂ ବ୍ୟକ୍ତିବିଶେଷଙ୍କୁ ଡିଜିଟାଲ ମାଲିକାନା ଫେରାଇ ଦେଇ ପରବର୍ତ୍ତୀ ବିଲିୟନ ଉପଭୋକ୍ତାଙ୍କ ପାଇଁ ସୁଯୋଗ ସୃଷ୍ଟି କରୁଛୁ। ଇକୋସିଷ୍ଟମ OS ଏବଂ ବ୍ରାଉଜର ଭଳି ଇନଫ୍ରା ଟେକ୍ନୋଲୋଜି ଠାରୁ ଆରମ୍ଭ କରି ଡିଜିଟାଲ ପରିଚୟ, ପେମେଣ୍ଟ, ବାଣିଜ୍ୟ ଏବଂ ଯୋଗାଯୋଗ ଭଳି ସେବା ପର୍ଯ୍ୟନ୍ତ ସବୁକିଛିକୁ ପୁନଃଆକାର ଦେବ, ସବୁକିଛି ଭାରତର ସବୁଠାରୁ ମୌଳିକ ସ୍ତର: ଏହାର ନିଜସ୍ୱ ଇଣ୍ଟରନେଟ୍ ଉପରେ ନିର୍ଭର କରି। ରେଳ ଏବଂ ପ୍ରତିଷ୍ଠାତାମାନେ ଏଥିରେ ନିର୍ମାଣ କରୁଥିବା ପଥଗୁଡ଼ିକରେ ନିବେଶ କରନ୍ତୁ ଏବଂ ଆପଣ ଡିଜିଟାଲ ଭାରତର ଭବିଷ୍ୟତରେ ନିବେଶ କରିବେ।</p>
+        </div>
+        <div class="grid-box">
+          <h3>ସରକାର ପାଇଁ</h3>
+          <p>ଡିଜିଟାଲ୍ ସାର୍ବଜନୀନ ସାମଗ୍ରୀ ଡିଜିଟାଲ୍ ସାର୍ବଜନୀନ ଭିତ୍ତିଭୂମି ପାଇବାକୁ ଯୋଗ୍ୟ। OpenSetu ସ୍ୱଚ୍ଛତା, ଅନ୍ତର୍ଭୁକ୍ତି ଏବଂ ସାର୍ବଭୌମତ୍ୱକୁ ମୂଳରେ ରଖି ନିର୍ମିତ। ଆମେ ଇଣ୍ଡିଆ ଷ୍ଟାକ୍ ର ଦୃଷ୍ଟିକୋଣ ସହିତ ସମନ୍ୱୟ ରଖୁ ଏବଂ ପ୍ରତ୍ୟେକ ନାଗରିକଙ୍କୁ ସେମାନଙ୍କ ମାତୃଭାଷାରେ ଡିଜିଟାଲ୍ ସେବା ପାଇବାକୁ ସଶକ୍ତ କରୁ। ଗ୍ରାମୀଣ ପ୍ରବେଶଠାରୁ ଜାତୀୟ ସ୍ତର ପର୍ଯ୍ୟନ୍ତ, OpenSetu ସରକାରଙ୍କୁ ପୂର୍ଣ୍ଣ-ଷ୍ଟାକ୍ ଡିଜିଟାଲ୍ ଅନ୍ତର୍ଭୁକ୍ତି ପାଇଁ ଏକ ସୁରକ୍ଷିତ, ସାର୍ବଭୌମ ପଥ ପ୍ରଦାନ କରେ। ଭାରତକୁ ବିଶ୍ୱ ଇଣ୍ଟରନେଟ୍ ସହିତ ଜଡିତ ରହିବାର ଆବଶ୍ୟକତା ନାହିଁ। OpenSetu ସହିତ, ଆମେ ଆମ ନିଜ ଭାଷାରେ, ଆମ ନିଜ ସର୍ତ୍ତରେ ଆଗକୁ ବଢ଼ିପାରୁଛୁ।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
