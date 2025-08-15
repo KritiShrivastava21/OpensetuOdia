@@ -1,9 +1,129 @@
 <!DOCTYPE html>
-<html lang="or">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OpenSetu ବିଷୟରେ</title>
+  <title>OpenSetu About Section</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    /* Menu bar styling */
+    .top-menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #f8f9fa;
+      padding: 12px 40px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .top-menu a {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .top-menu a:hover {
+      color: #007BFF;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+    }
+
+    /* Side menu */
+    .side-menu {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 2000;
+    }
+    .side-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+    .side-menu a:hover {
+      color: #007BFF;
+    }
+    .side-menu .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2em;
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Responsive rules */
+    @media (max-width: 768px) {
+      .top-menu a {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+    }
+  </style>
+</head>
+<body class="page">
+
+  <!-- Top Menu -->
+  <nav class="top-menu">
+    <a href="index.html">ହୋମ୍</a>
+    <a href="about.html">ଆମ ବିଷୟରେ</a>
+    <a href="beta.html">କାନୁନୀ</a>
+    <a href="documentation.html">ଡକ୍ୟୁମେଣ୍ଟେସନ୍</a>
+    <a href="domain.html">ଡୋମେନ୍ ତାଲିକା</a>
+    <button class="menu-toggle" onclick="openMenu()"><i class="fas fa-bars"></i></button>
+  </nav>
+
+  <!-- Side Menu -->
+  <div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+    <a href="index.html">ହୋମ୍</a>
+    <a href="about.html">ଆମ ବିଷୟରେ</a>
+    <a href="beta.html">କାନୁନୀ</a>
+    <a href="documentation.html">ଡକ୍ୟୁମେଣ୍ଟେସନ୍</a>
+    <a href="domain.html">ଡୋମେନ୍ ତାଲିକା</a>
+  </div>
+
+
+  <script>
+function openMenu() {
+  document.getElementById("sideMenu").style.width = "250px"; // Adjust width as needed
+}
+
+function closeMenu() {
+  document.getElementById("sideMenu").style.width = "0";
+}
+</script>
+
+
+
+
   <style>
     :root {
       --max-width: 1200px;
@@ -139,6 +259,7 @@
       margin: 0;
     }
 
+    /* Breakpoints */
     @media (max-width: 768px) {
       .section { padding: 6rem var(--gutter) 3rem; }
       .about-heading {
@@ -165,35 +286,38 @@
     </div>
 
     <div class="section">
-      <div class="top-container">
-        <div class="top-text">
-          <h1 class="about-heading">ଆମ ବିଷୟରେ</h1>
-          <p class="highlight">ଗୋଟିଏ ନାମ, ଗୋଟିଏ ଭାଷା, ଗୋଟିଏ ପରିଚୟ</p>
-          <h2>OpenSetu ହେଉଛି ଭାରତର ନିଜସ୍ୱ ଇଣ୍ଟରନେଟର ସେତୁ</h2>
-          <p>ଆମେ ପ୍ରତ୍ୟେକ ଭାରତୀୟଙ୍କୁ ସେମାନଙ୍କ ମାତୃଭାଷାରେ ୱେବ୍ ଆକ୍ସେସ୍ କରିବାକୁ ସକ୍ଷମ କରୁଛୁ, ଇଂରାଜୀ ନାହିଁ, ନୂତନ ଆପ୍ ନାହିଁ, ଗେଟକିପର ନାହିଁ।</p>
-          <p>ଏକ ମୁକ୍ତ, ବିକେନ୍ଦ୍ରୀକରଣ ଏବଂ ଅନ୍ତର୍ଭୁକ୍ତ ଇଣ୍ଟରନେଟର ଦୃଷ୍ଟିକୋଣରୁ ଜନ୍ମିତ, OpenSetu ବ୍ୟବହାରକାରୀମାନଙ୍କୁ ହ୍ୟାଣ୍ଡସେକ୍ ଦ୍ୱାରା ପରିଚାଳିତ ଏବଂ ଭାରତରେ ମୂଳ ଥିବା ଏକ ବହୁଭାଷୀ ୱେବ୍ ଅନଲକ୍ କରିବା ପାଇଁ ସେମାନଙ୍କର DNS ସେଟିଂସ୍ ପରିବର୍ତ୍ତନ କରିବାକୁ ଦେଇଥାଏ। ଏହା ଆପଣଙ୍କ ପାଇଁ ଇଣ୍ଟରନେଟ୍, ଯେଉଁଠାରେ ଡୋମେନ୍ ନାମଗୁଡ଼ିକ ବିଦେଶୀ ସ୍କ୍ରିପ୍ଟ କିମ୍ବା କେନ୍ଦ୍ରୀକୃତ ନିୟନ୍ତ୍ରଣରେ ନୁହେଁ, ବରଂ ଆପଣଙ୍କ ନିଜସ୍ୱ ଭାଷାରେ, ଆପଣଙ୍କ ଦ୍ୱାରା ମାଲିକାନା।</p>
-          <p>ଆମେ ଇଣ୍ଟରନେଟକୁ ଏକାଧିକାର କବଳରୁ ଉଦ୍ଧାର କରୁଛୁ ଏବଂ ଏହାକୁ ଲୋକଙ୍କୁ ଗୋଟିଏ ନାମ, ଗୋଟିଏ ଭାଷା, ଗୋଟିଏ ପରିଚୟ ଫେରାଇ ଦେଉଛୁ।</p>
-        </div>
-        <div class="top-image">
-          <img src="img5.png" alt="About Image">
-        </div>
-      </div>
+  <div class="top-container">
+    <div class="top-text">
+      <h1 class="about-heading">ଆମ ବିଷୟରେ</h1>
 
-      <div class="grid">
-        <div class="grid-box">
-          <h3>ବିଲ୍ଡରମାନଙ୍କ ପାଇଁ</h3>
-          <p>OpenSetu ହେଉଛି ନବସୃଜନ ପାଇଁ ଏକ ଖେଳ ପଡ଼ିଆ। ଡେଭଲପରମାନେ ସ୍ଥାନୀୟ ଆପ୍ ନିର୍ମାଣ କରିବାଠାରୁ ଆରମ୍ଭ କରି ଡିଜିଟାଲ୍ ପରିଚୟକୁ ପୁନଃକଳ୍ପନା କରୁଥିବା ଷ୍ଟାର୍ଟଅପ୍ ପର୍ଯ୍ୟନ୍ତ, ଭାରତ ପାଖରେ ଏବେ ଏକ ବିକେନ୍ଦ୍ରୀକୃତ ଭିତ୍ତିଭୂମି ପ୍ରସ୍ତୁତ ଅଛି। ସ୍ଥାନୀୟ ଡୋମେନ୍ ନାମ, ବହୁଭାଷୀ ଲଗଇନ୍ ଏବଂ ଏକ ଖୋଲା DNS ସହିତ, ଆପଣ ଏପରି ସେବା ନିର୍ମାଣ କରିପାରିବେ ଯାହା ସିଧାସଳଖ 1.4 ବିଲିୟନ ସ୍ୱର ସହିତ ସେମାନଙ୍କ ନିଜ ଭାଷାରେ କଥା ହୋଇପାରିବେ।</p>
-        </div>
-        <div class="grid-box">
-          <h3>ନିବେଶକଙ୍କ ପାଇଁ</h3>
-          <p>ଭାରତ ଖୋଲା ଇଣ୍ଟରନେଟରେ ମାନବଜାତିର ସବୁଠାରୁ ବଡ଼ ଅଂଶ। OpenSetu କେବଳ ଭିତ୍ତିଭୂମି ନୁହେଁ, ଏହା ଏକ ଭିତ୍ତିଭୂମି-ଶକ୍ତି। ଆମେ ଭାଷା ପ୍ରତିବନ୍ଧକକୁ ଦୂର କରି ଏବଂ ବ୍ୟକ୍ତିବିଶେଷଙ୍କୁ ଡିଜିଟାଲ ମାଲିକାନା ଫେରାଇ ଦେଇ ପରବର୍ତ୍ତୀ ବିଲିୟନ ଉପଭୋକ୍ତାଙ୍କ ପାଇଁ ସୁଯୋଗ ସୃଷ୍ଟି କରୁଛୁ। ଇକୋସିଷ୍ଟମ OS ଏବଂ ବ୍ରାଉଜର ଭଳି ଇନଫ୍ରା ଟେକ୍ନୋଲୋଜି ଠାରୁ ଆରମ୍ଭ କରି ଡିଜିଟାଲ ପରିଚୟ, ପେମେଣ୍ଟ, ବାଣିଜ୍ୟ ଏବଂ ଯୋଗାଯୋଗ ଭଳି ସେବା ପର୍ଯ୍ୟନ୍ତ ସବୁକିଛିକୁ ପୁନଃଆକାର ଦେବ, ସବୁକିଛି ଭାରତର ସବୁଠାରୁ ମୌଳିକ ସ୍ତର: ଏହାର ନିଜସ୍ୱ ଇଣ୍ଟରନେଟ୍ ଉପରେ ନିର୍ଭର କରି। ରେଳ ଏବଂ ପ୍ରତିଷ୍ଠାତାମାନେ ଏଥିରେ ନିର୍ମାଣ କରୁଥିବା ପଥଗୁଡ଼ିକରେ ନିବେଶ କରନ୍ତୁ ଏବଂ ଆପଣ ଡିଜିଟାଲ ଭାରତର ଭବିଷ୍ୟତରେ ନିବେଶ କରିବେ।</p>
-        </div>
-        <div class="grid-box">
-          <h3>ସରକାର ପାଇଁ</h3>
-          <p>ଡିଜିଟାଲ୍ ସାର୍ବଜନୀନ ସାମଗ୍ରୀ ଡିଜିଟାଲ୍ ସାର୍ବଜନୀନ ଭିତ୍ତିଭୂମି ପାଇବାକୁ ଯୋଗ୍ୟ। OpenSetu ସ୍ୱଚ୍ଛତା, ଅନ୍ତର୍ଭୁକ୍ତି ଏବଂ ସାର୍ବଭୌମତ୍ୱକୁ ମୂଳରେ ରଖି ନିର୍ମିତ। ଆମେ ଇଣ୍ଡିଆ ଷ୍ଟାକ୍ ର ଦୃଷ୍ଟିକୋଣ ସହିତ ସମନ୍ୱୟ ରଖୁ ଏବଂ ପ୍ରତ୍ୟେକ ନାଗରିକଙ୍କୁ ସେମାନଙ୍କ ମାତୃଭାଷାରେ ଡିଜିଟାଲ୍ ସେବା ପାଇବାକୁ ସଶକ୍ତ କରୁ। ଗ୍ରାମୀଣ ପ୍ରବେଶଠାରୁ ଜାତୀୟ ସ୍ତର ପର୍ଯ୍ୟନ୍ତ, OpenSetu ସରକାରଙ୍କୁ ପୂର୍ଣ୍ଣ-ଷ୍ଟାକ୍ ଡିଜିଟାଲ୍ ଅନ୍ତର୍ଭୁକ୍ତି ପାଇଁ ଏକ ସୁରକ୍ଷିତ, ସାର୍ବଭୌମ ପଥ ପ୍ରଦାନ କରେ। ଭାରତକୁ ବିଶ୍ୱ ଇଣ୍ଟରନେଟ୍ ସହିତ ଜଡିତ ରହିବାର ଆବଶ୍ୟକତା ନାହିଁ। OpenSetu ସହିତ, ଆମେ ଆମ ନିଜ ଭାଷାରେ, ଆମ ନିଜ ସର୍ତ୍ତରେ ଆଗକୁ ବଢ଼ିପାରୁଛୁ।</p>
-        </div>
-      </div>
+      <h2>ଓପେନସେତୁ ହେଉଛି
+        <br>ଭାରତର ନିଜସ୍ୱ ଇଣ୍ଟରନେଟ୍‌କୁ ସେତୁ।</h2>
+      <p>ଆମେ ପ୍ରତ୍ୟେକ ଭାରତୀୟଙ୍କୁ ତାଙ୍କର ମା'ବୋଲୀରେ ୱେବ୍‌ର ଆକ୍ସେସ୍ ଦେଇଥାଉ — କୌଣସି ଇଂରାଜୀ ନୁହେଁ, କୌଣସି ନୂତନ ଆପ୍ ନୁହେଁ, କୌଣସି ପ୍ରତିବନ୍ଧକ ନୁହେଁ।</p>
+      <p>ମୁକ୍ତ, ବିକେନ୍ଦ୍ରୀକୃତ ଓ ସମାବେଶୀ ଇଣ୍ଟରନେଟ୍‌ର ଦୃଷ୍ଟିକୋଣରୁ ଜନ୍ମିତ, ଓପେନସେତୁ ଉପଯୋଗକର୍ତ୍ତାଙ୍କୁ କେବଳ ନିଜର DNS ସେଟିଙ୍ଗ୍ସ ବଦଳାଇ, Handshake ଦ୍ୱାରା ସଚାଳିତ ଓ ଭାରତରେ ଭିତ୍ତିକରିତ ଏକ ବହୁଭାଷୀ ୱେବ୍ ଖୋଲିବାର ସୁଯୋଗ ଦେଇଥାଏ। ଏହା ଆପଣଙ୍କ ନିୟମରେ ଇଣ୍ଟରନେଟ୍ — ଯେଉଁଠାରେ ଡୋମେନ୍ ନାମ ବିଦେଶୀ ଲିପି କିମ୍ବା କେନ୍ଦ୍ରୀୟ ନିୟନ୍ତ୍ରଣରେ ନୁହେଁ, ବରଂ ନିଜ ଭାଷାରେ, ନିଜର ମାଲିକୀତ୍ୱରେ।</p>
+      <p>ଆମେ ଇଣ୍ଟରନେଟ୍‌କୁ ଏକାଧିକାରୀଙ୍କ ହାତରୁ ଫେରାଇ, ଲୋକମାନଙ୍କୁ ଫେରାଇଦେଉଛୁ — ପ୍ରତିଥରେ ଏକ ନାମ, ଏକ ଭାଷା, ଏକ ପରିଚୟ।</p>
     </div>
-  </section>
+    <div class="top-image">
+      <img src="img5.png" alt="ଆମ ବିଷୟରେ ଛବି">
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="grid-box">
+      <h3>ନିର୍ମାଣକାରୀଙ୍କ ପାଇଁ</h3>
+      <p>ଓପେନସେତୁ ହେଉଛି ନବୀନତା ପାଇଁ ଏକ ଖେଳମାଟ। ଅଞ୍ଚଳିକ ଆପ୍ ସୃଷ୍ଟି କରୁଥିବା ଡିଭେଲପର୍‌ରୁ ଆରମ୍ଭ କରି ଡିଜିଟାଲ୍ ପରିଚୟକୁ ପୁନଃକଳ୍ପନା କରୁଥିବା ଷ୍ଟାର୍ଟଅପ୍ ପର୍ଯ୍ୟନ୍ତ — ଭାରତରେ ଏବେ ଗଢ଼ିବା ପାଇଁ ପ୍ରସ୍ତୁତ ଏକ ବିକେନ୍ଦ୍ରୀକୃତ ଭିତ୍ତିରହିଛି। ସ୍ୱଦେଶୀ ଡୋମେନ୍ ନାମ, ବହୁଭାଷୀ ଲଗଇନ୍, ଓ ଖୋଲା DNS ସହିତ, ଆପଣ 1.4 ଅରବ କଣ୍ଠକୁ ତାଙ୍କର ନିଜସ୍ୱ ଭାଷାରେ ସିଧାସଳଖ କଥାହେବା ସେବାଗୁଡ଼ିକ ତିଆରି କରିପାରିବେ।</p>
+    </div>
+    <div class="grid-box">
+      <h3>ନିବେଶକମାନଙ୍କ ପାଇଁ</h3>
+      <p>ଖୋଲା ଇଣ୍ଟରନେଟ୍‌ରେ ଭାରତ ହେଉଛି ମାନବତାର ସବୁଠୁ ବଡ଼ ଅଂଶ। ଓପେନସେତୁ କେବଳ ଇନଫ୍ରାସ୍ଟ୍ରକ୍ଚର୍ ନୁହେଁ, ଏହା ‘ଇନଫ୍ରା-ପାୱାର୍’। ଆମେ ଭାଷା ବାଧାକୁ ଦୂର କରି, ଡିଜିଟାଲ୍ ମାଲିକୀତ୍ୱକୁ ବ୍ୟକ୍ତିଙ୍କୁ ଫେରାଇ, ପରବର୍ତ୍ତୀ ଅରବ ଉପଯୋଗକର୍ତ୍ତାଙ୍କୁ ଖୋଲିଦେଉଛୁ। ଏହି ପରିବେଶ OS ଓ ବ୍ରାଉଜର୍ ପରି ଇନଫ୍ରା-ଟେକ୍‌ରୁ ଆରମ୍ଭ କରି, ଡିଜିଟାଲ୍ ପରିଚୟ, ପେମେଣ୍ଟ୍, କମର୍ସ୍ ଓ ଯୋଗାଯୋଗ ପରି ସେବା ପର୍ଯ୍ୟନ୍ତ ସବୁକୁ ପୁନର୍ଗଠିତ କରିବ — ଯାହାର ଭିତ୍ତି ହେଉଛି ଭାରତର ନିଜସ୍ୱ ଇଣ୍ଟରନେଟ୍। ଏହାର ଉପରେ ନିର୍ମାଣ କରୁଥିବା ରେଲ୍‌ସ ଓ ସ୍ଥାପକମାନଙ୍କରେ ନିବେଶ କରନ୍ତୁ — ଆପଣ ଡିଜିଟାଲ୍ ଭାରତର ଭବିଷ୍ୟତରେ ନିବେଶ କରୁଛନ୍ତି।</p>
+    </div>
+    <div class="grid-box">
+      <h3>ସରକାରଙ୍କ ପାଇଁ</h3>
+      <p>ଡିଜିଟାଲ୍ ପବ୍ଲିକ୍ ଗୁଡ୍ସ ପାଇଁ ଡିଜିଟାଲ୍ ପବ୍ଲିକ୍ ଇନଫ୍ରାସ୍ଟ୍ରକ୍ଚର୍ ଦରକାର। ଓପେନସେତୁର ମୂଳରେ ରହିଛି ପ୍ରତିଷ୍ଠା, ସମାବେଶ, ଓ ସ୍ୱାଧୀନତା। ଆମେ ଇଣ୍ଡିଆ ଷ୍ଟ୍ୟାକ୍‌ର ଦୃଷ୍ଟିକୋଣ ସହିତ ସମନ୍ୱୟ କରି, ପ୍ରତ୍ୟେକ ନାଗରିକଙ୍କୁ ତାଙ୍କର ନିଜସ୍ୱ ଭାଷାରେ ଡିଜିଟାଲ୍ ସେବା ଆକ୍ସେସ୍ କରିବାକୁ ସଶକ୍ତ କରୁଛୁ। ଗ୍ରାମୀଣ ସ୍ତରରୁ ଜାତୀୟ ସ୍ତର ପର୍ଯ୍ୟନ୍ତ, ଓପେନସେତୁ ସରକାରଙ୍କୁ ପୂର୍ଣ୍ଣ-ଷ୍ଟ୍ୟାକ୍ ଡିଜିଟାଲ୍ ସମାବେଶ ପାଇଁ ସୁରକ୍ଷିତ, ସ୍ୱାଧୀନ ପଥ ଦେଇଥାଏ।
+      ଭାରତକୁ ବିଶ୍ୱ ଇଣ୍ଟରନେଟ୍‌କୁ ପଛୁଆଇବାର ପ୍ରୟୋଜନ ନାହିଁ। ଓପେନସେତୁ ସହିତ, ଆମେ ନିଜର ଭାଷାରେ, ନିଜର ନିୟମରେ ଏଗୁଜାଉଛୁ।</p>
+    </div>
+  </div>
+</div>
+</section>
+
 </body>
 </html>
